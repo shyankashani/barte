@@ -41,5 +41,7 @@ defmodule BarteWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug BarteWeb.Router
+
+  plug Absinthe.Plug,
+    schema: BarteWeb.Schema
 end
